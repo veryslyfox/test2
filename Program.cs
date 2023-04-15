@@ -1,3 +1,11 @@
-﻿string a = new("Ifmmp!xpsme\"".Select(c => (char)(c - 1)).ToArray());
-Console.WriteLine(a);
+﻿StreamReader reader = File.OpenText("Program.cs");
+while (true)
+{
+    var s = reader.ReadLine();
+    if (s == null)
+    {
+        break;
+    }
+    Console.WriteLine(s);
+}
 Console.ReadKey();
